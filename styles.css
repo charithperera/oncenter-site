@@ -1,0 +1,123 @@
+/* OnCenter's site: the app's tape-blade identity on the web.
+   Tokens mirror OnCenter/Shared/Design/DesignSystem.swift (DESIGN.md Part 1).
+   Ink on white, one yellow blade band, the red only as the 16 badge and the
+   ruler's tick. Links are ink, never blue (DESIGN.md, Don't). */
+
+:root {
+  --page: #FFFFFF;
+  --ink: #121212;
+  --muted: #6B6B6B;
+  --label: #767676;
+  --rule: #E2E2E2;
+  --blade: #F7C600;
+  --on-blade: #121212;
+  --red: #D7261E;
+  --red-on-blade: #D7261E;
+  --numbers: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #121212;
+    --ink: #F2F2F2;
+    --muted: #9A9A9A;
+    --label: #7E7E7E;
+    --rule: #2C2C2C;
+    --red: #FF4A3D;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --page: #121212;
+  --ink: #F2F2F2;
+  --muted: #9A9A9A;
+  --label: #7E7E7E;
+  --rule: #2C2C2C;
+  --red: #FF4A3D;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font: 17px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2.5px; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding-inline: 20px; }
+
+/* The wordmark: Big Shoulders 800 with the red-boxed 16. */
+.wordmark {
+  display: inline-flex; align-items: center; gap: 7px;
+  font: 800 27px/1 var(--numbers); color: var(--ink); text-decoration: none;
+}
+.wordmark .badge {
+  font: 800 12px/1 var(--numbers); color: var(--red);
+  border: 2px solid var(--red); border-radius: 2px; padding: 2px 3px 1px;
+}
+
+header.top { padding-block: 22px 18px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+header.top nav { display: flex; gap: 18px; font: 600 12px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+header.top nav a { text-decoration: none; color: var(--label); }
+header.top nav a:hover, header.top nav a[aria-current] { color: var(--ink); }
+
+.label { font: 600 12px/16px var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--label); }
+
+/* The blade: full-bleed yellow, one answer, its ruler. */
+.blade { background: var(--blade); color: var(--on-blade); }
+.blade .wrap { padding-block: 14px 8px; }
+.blade .line { display: flex; justify-content: space-between; gap: 12px; font: 600 12px/18px var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+.blade .answer { font: 800 clamp(66px, 16vw, 120px)/1 var(--numbers); letter-spacing: -.01em; margin-top: 4px; }
+/* The raised fraction, as the blade sets it: numerals at 0.55×, the
+   numerator raised, the ⁄ at full size between them. */
+.blade .answer .num-top, .blade .answer .num-bottom { font-size: .55em; line-height: 0; }
+.blade .answer .num-top { vertical-align: .6em; }
+
+.ruler { position: relative; height: 40px; margin-top: 8px; }
+.ruler .tick { position: absolute; top: 0; width: 1.5px; background: var(--on-blade); }
+.ruler .num { position: absolute; bottom: 0; font: 800 13px/1 var(--numbers); }
+.ruler .mark { position: absolute; top: 0; bottom: 0; width: 3px; background: var(--red-on-blade); transform: translateX(-1px); }
+.ruler .mark::after {
+  content: ""; position: absolute; bottom: -1px; left: -4.5px;
+  border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 8px solid var(--red-on-blade);
+}
+
+main { padding-block: 28px 48px; }
+
+.lead { font-size: 20px; line-height: 1.45; color: var(--ink); max-width: 34ch; margin: 0 0 16px; text-wrap: balance; }
+.soon { display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid var(--ink); border-radius: 10px; padding: 12px 16px; font: 600 13px/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+
+.points { list-style: none; padding: 0; margin: 32px 0 0; border-top: 1px solid var(--rule); }
+.points li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.points .n { flex: none; width: 28px; font: 700 21px/1.2 var(--numbers); color: var(--label); }
+.points b { display: block; font: 600 12px/16px var(--sans); letter-spacing: .06em; text-transform: uppercase; }
+.points span { display: block; margin-top: 2px; color: var(--muted); font-size: 15px; line-height: 20px; }
+
+/* Legal and support pages. */
+.doc h1 { font: 800 56px/52px var(--numbers); text-transform: uppercase; margin: 6px 0 10px; text-wrap: balance; }
+.doc .updated { margin: 0 0 24px; }
+.doc h2 { font: 600 17px/22px var(--sans); margin: 32px 0 6px; padding-top: 16px; border-top: 1px solid var(--rule); }
+.doc p, .doc li { color: var(--ink); max-width: 66ch; }
+.doc p { margin: 0 0 12px; }
+.doc ul { padding-left: 20px; margin: 0 0 12px; }
+.doc li { margin-bottom: 6px; }
+.doc .muted { color: var(--muted); }
+/* Keys and typed entries, outlined like the keypad's keys. */
+.doc code { font: 600 15px/1 var(--sans); white-space: nowrap; border: 1.5px solid var(--ink); border-radius: 6px; padding: 1px 6px; }
+.email { font: 700 25px/1.2 var(--numbers); }
+
+footer { border-top: 1px solid var(--rule); }
+footer .wrap { padding-block: 18px 28px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+footer, footer a { color: var(--label); font: 600 12px/18px var(--sans); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; }
+footer a:hover { color: var(--ink); }

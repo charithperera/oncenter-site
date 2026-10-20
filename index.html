@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnCenter — Feet &amp; Inch Calculator</title>
+  <meta name="description" content="OnCenter is a feet-inch-fraction calculator for builders. Exact fractions, proved on the ruler. Rafters, stairs, board feet and takeoff with Pro.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23F7C600'/%3E%3Crect%20x='5'%20y='5'%20width='14'%20height='11'%20rx='1'%20fill='none'%20stroke='%23D7261E'%20stroke-width='2'/%3E%3Cpath%20d='M6%2032V24M11%2032V27M16%2032V24M21%2032V27M26%2032V24'%20stroke='%23121212'%20stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap top">
+    <a class="wordmark" href="index.html" aria-label="OnCenter">OnCenter<span class="badge" aria-hidden="true">16</span></a>
+    <nav aria-label="Site">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <section class="blade" aria-label="An example answer: 3 and 5 eighths inches, marked on the ruler">
+    <div class="wrap">
+      <div class="line"><span>You press 3 5 ⁄ 8</span><span>On the ruler</span></div>
+      <div class="answer" aria-hidden="true">3 <span class="num-top">5</span>⁄<span class="num-bottom">8</span>″</div>
+      <div class="ruler" aria-hidden="true" id="ruler"></div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <p class="lead">A feet-inch calculator for builders. Every fraction worked out exactly, and proved on the ruler.</p>
+    <span class="soon">Coming soon to the App Store</span>
+
+    <ol class="points">
+      <li><span class="n">01</span><div><b>Feet, inches, sixteenths</b><span>Type 7′ 3 5/8″ the way you read the tape. Round to anything from 1/2″ to 1/64″, and see how far the answer was rounded.</span></div></li>
+      <li><span class="n">02</span><div><b>A tape that keeps your work</b><span>Every answer lands on the tape. Tap a line to use it again; hold it to copy.</span></div></li>
+      <li><span class="n">03</span><div><b>Builder keys with Pro</b><span>Rafters, stairs, board feet and material takeoff, saved jobs and export. A one-time purchase, no subscription.</span></div></li>
+    </ol>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://dev.charithp.com">dev.charithp.com</a>
+      </nav>
+      <span>© 2026 Charith Perera</span>
+    </div>
+  </footer>
+
+  <script>
+    // The blade's ruler: one inch in sixteenths, 3 to 4, the tick at 5/8.
+    // Heights as the app draws them (RulerStrip): whole, half, quarter, eighth, sixteenth.
+    (function () {
+      var ruler = document.getElementById('ruler');
+      var heights = [0.88, 0.22, 0.36, 0.22, 0.5, 0.22, 0.36, 0.22, 0.66, 0.22, 0.36, 0.22, 0.5, 0.22, 0.36, 0.22, 0.88];
+      heights.forEach(function (h, i) {
+        var t = document.createElement('span');
+        t.className = 'tick';
+        t.style.left = 'calc(' + (i / 16 * 100) + '% - ' + (i / 16 * 2) + 'px)';
+        t.style.height = (h * 100) + '%';
+        if (i === 0 || i === 16) t.style.width = '2px';
+        ruler.appendChild(t);
+      });
+      var left = document.createElement('span');
+      left.className = 'num'; left.textContent = '3'; left.style.left = '5px';
+      var right = document.createElement('span');
+      right.className = 'num'; right.textContent = '4'; right.style.right = '6px';
+      var mark = document.createElement('span');
+      mark.className = 'mark'; mark.style.left = 'calc(62.5% - 1.25px)';
+      ruler.append(left, right, mark);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — OnCenter</title>
+  <meta name="description" content="Help with OnCenter, the feet-inch calculator for builders: typing fractions, precision and rounding, builder keys, saved tapes and restoring Pro.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23F7C600'/%3E%3Crect%20x='5'%20y='5'%20width='14'%20height='11'%20rx='1'%20fill='none'%20stroke='%23D7261E'%20stroke-width='2'/%3E%3Cpath%20d='M6%2032V24M11%2032V27M16%2032V24M21%2032V27M26%2032V24'%20stroke='%23121212'%20stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap top">
+    <a class="wordmark" href="index.html" aria-label="OnCenter home">OnCenter<span class="badge" aria-hidden="true">16</span></a>
+    <nav aria-label="Site">
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="wrap doc">
+    <h1>Support</h1>
+    <p class="updated label">Help, feedback and bug reports</p>
+
+    <h2>Get in touch</h2>
+    <p>Email is the fastest way to reach me, and I read every message.</p>
+    <p class="email"><a href="mailto:oncenter@charithp.com?subject=OnCenter%20Support">oncenter@charithp.com</a></p>
+    <p>Please include your iOS version and what you typed. If an answer looks wrong, the calculation from the tape (hold the line to copy it) helps most.</p>
+
+    <h2>How do I type a fraction?</h2>
+    <p>Press the whole inches, the numerator, <code>⁄</code>, then the denominator: <code>3 5 ⁄ 8</code> is 3 5/8″. OnCenter reads the longest fraction that makes sense, so <code>3 15 ⁄ 16</code> is 3 15/16″ and <code>1 1 ⁄ 16</code> is 11/16″.</p>
+    <p>When the digits could be read two ways, the blade says so as you type. <code>1 1 3 ⁄ 16</code> reads 1 13/16″; for 11 3/16″, press <code>1 1 ″</code> first and then <code>3 ⁄ 16</code>. The inch mark ends the whole inches.</p>
+
+    <h2>Feet, inches and plain numbers</h2>
+    <p>Use <code>′</code> for feet and <code>″</code> for inches: <code>7′ 3 5/8″ + 2′ 11 3/16″</code>. A plain number added to a length counts as inches. A length times a length is an area in square feet, and times a third length a volume.</p>
+
+    <h2>Precision and rounding</h2>
+    <p>The chip in the header sets how answers are rounded, from 1/2″ to 1/64″. It starts at 1/16″. The blade's note says how far the shown answer is from the exact one, for example "0.022″ short", and the red tick on the ruler shows exactly where the fraction lands.</p>
+    <p>Arithmetic is exact: OnCenter keeps every value as a true fraction and only rounds what it shows you, so chaining answers never piles up rounding.</p>
+
+    <h2>What does CONV do?</h2>
+    <p>CONV shows the current answer in inches, decimal feet, millimetres, centimetres or metres, one press at a time. The next answer goes back to feet and inches, or to the unit you chose in Settings with Pro.</p>
+
+    <h2>How do the builder keys work? (Pro)</h2>
+    <p>RISE, RUN, DIAG and PITCH each hold a value: type it, press the key. With two held, press another key to solve it. RUN 12′ and PITCH 7 then DIAG gives the rafter's length, and pressing DIAG again steps through the plumb and level cuts. PITCH is inches of rise per foot, so 7 is 7/12.</p>
+    <p>STAIR takes a total rise and gives the risers, treads, run, stringer and angle, checked against the IRC's common limits (a 7 3/4″ maximum riser and a 10″ minimum tread). These are general defaults, not a code-compliance check: your local code decides.</p>
+
+    <h2>Board feet, takeoff and the full rafter (Pro)</h2>
+    <p>The Tools button opens three calculators on the same keypad: board feet with cost, material takeoff (concrete in yards and 60 or 80 lb bags, drywall sheets, flooring with waste, gravel and mulch) and the full common rafter with overhang, ridge reduction and the cut list. Add to tape puts the answer on the tape.</p>
+
+    <h2>Saving and exporting tapes (Pro)</h2>
+    <p>Tapes → Save names the current tape as a job. An open tape saves as you go. Share a tape as text or CSV from its row, or export every saved job as one CSV from Settings → Export all tapes.</p>
+
+    <h2>Can I sync across my devices?</h2>
+    <p>Yes. If you're signed in to iCloud, saved tapes sync to your other devices through your private iCloud. There's no account to make.</p>
+
+    <h2>Is there a widget?</h2>
+    <p>Yes, for everyone. The small and medium Home Screen widgets show your last answer on the blade, with its ruler. The medium one also shows the two tape lines above it.</p>
+
+    <h2>What's in OnCenter Pro?</h2>
+    <p>Pro is a one-time purchase, with no subscription. It adds:</p>
+    <ul>
+      <li>The builder keys: rise, run, diag, pitch and stair on the keypad</li>
+      <li>Rafters: line length, ridge reduction, tail, plumb and level cuts</li>
+      <li>Stairs: risers and treads to IRC defaults</li>
+      <li>Board feet, any size and count, with cost</li>
+      <li>Takeoff: concrete bags, drywall, flooring and gravel</li>
+      <li>Saved tapes, named by job</li>
+      <li>Export as text or CSV</li>
+      <li>Default precision and units</li>
+    </ul>
+    <p>Free always includes the feet-inch-fraction calculator with every precision and unit, conversions, the session tape and the widget.</p>
+
+    <h2>How do I restore Pro on a new device?</h2>
+    <p>Pro is tied to your Apple ID. On a device signed in to the same Apple ID, open Settings → Restore purchase, or Restore on the Pro screen.</p>
+
+    <h2>Refunds</h2>
+    <p>Purchases are handled by Apple. To ask for a refund, use <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. I can't issue refunds myself; only Apple can.</p>
+
+    <h2>Feature requests</h2>
+    <p>Always welcome: <a href="mailto:oncenter@charithp.com?subject=OnCenter%20Feature%20Idea">oncenter@charithp.com</a>. I read them all, and what builders actually need comes first.</p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://dev.charithp.com">dev.charithp.com</a>
+      </nav>
+      <span>© 2026 Charith Perera</span>
+    </div>
+  </footer>
+</body>
+</html>
