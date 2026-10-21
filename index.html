@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OnCenter — Feet &amp; Inch Calculator</title>
-  <meta name="description" content="OnCenter is a feet-inch-fraction calculator for builders. Exact fractions, proved on the ruler. Rafters, stairs, board feet and takeoff with Pro.">
+  <title>OnCenter — Feet &amp; Inch Calculator for Builders</title>
+  <meta name="description" content="OnCenter is a feet-inch-fraction calculator for builders. Exact fractions, proved on the ruler. Rafters, stairs, squaring, board feet and concrete takeoff. Pay once, no subscription.">
+  <meta property="og:title" content="OnCenter — Feet &amp; Inch Calculator for Builders">
+  <meta property="og:description" content="Exact fractions, proved on the ruler. Rafters, stairs and takeoff. Pay once, no subscription.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F7C600">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23F7C600'/%3E%3Crect%20x='5'%20y='5'%20width='14'%20height='11'%20rx='1'%20fill='none'%20stroke='%23D7261E'%20stroke-width='2'/%3E%3Cpath%20d='M6%2032V24M11%2032V27M16%2032V24M21%2032V27M26%2032V24'%20stroke='%23121212'%20stroke-width='2'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,23 +24,89 @@
     </nav>
   </header>
 
-  <section class="blade" aria-label="An example answer: 3 and 5 eighths inches, marked on the ruler">
+  <!-- The hero is the app's blade, full-bleed: one answer and the ruler that proves it. -->
+  <section class="blade" aria-label="An example answer: a common rafter of 13 feet 10 and 11 sixteenths inches, marked on the ruler">
     <div class="wrap">
-      <div class="line"><span>You press 3 5 ⁄ 8</span><span>On the ruler</span></div>
-      <div class="answer" aria-hidden="true">3 <span class="num-top">5</span>⁄<span class="num-bottom">8</span>″</div>
-      <div class="ruler" aria-hidden="true" id="ruler"></div>
+      <div class="line"><span>Diag · common rafter</span><span>0.022″ short</span></div>
+      <div class="answer" aria-hidden="true">13′ 10 <span class="num-top">11</span>⁄<span class="num-bottom">16</span>″</div>
+      <div class="ruler" aria-hidden="true" data-from="10" data-tick="11"></div>
     </div>
   </section>
 
-  <main class="wrap">
-    <p class="lead">A feet-inch calculator for builders. Every fraction worked out exactly, and proved on the ruler.</p>
-    <span class="soon">Coming soon to the App Store</span>
+  <main>
+    <section class="wrap intro">
+      <h1>The feet-inch calculator for builders.</h1>
+      <p class="lead">Punch in lengths just the way you'd read them off a tape, and OnCenter works the fractions out exactly, then shows you where the answer lands on a ruler. When the job calls for more, the builder tools take care of rafters, stairs, squaring and concrete, and you only ever pay for them once.</p>
+      <span class="soon">Coming soon to the App Store</span>
+    </section>
 
-    <ol class="points">
-      <li><span class="n">01</span><div><b>Feet, inches, sixteenths</b><span>Type 7′ 3 5/8″ the way you read the tape. Round to anything from 1/2″ to 1/64″, and see how far the answer was rounded.</span></div></li>
-      <li><span class="n">02</span><div><b>A tape that keeps your work</b><span>Every answer lands on the tape. Tap a line to use it again; hold it to copy.</span></div></li>
-      <li><span class="n">03</span><div><b>Builder keys with Pro</b><span>Rafters, stairs, board feet and material takeoff, saved jobs and export. A one-time purchase, no subscription.</span></div></li>
-    </ol>
+    <!-- The tape: the app's screens in a row, read left to right like a tape measure. -->
+    <section class="screens" aria-label="Screens from the app">
+      <div class="strip">
+        <figure>
+          <div class="phone"><picture><source srcset="screenshots/01-calculator-dark.png" media="(prefers-color-scheme: dark)"><img src="screenshots/01-calculator.png" alt="The OnCenter calculator: a tape of board feet, rafter and stair answers above the yellow blade, which reads 13 feet 10 and 11 sixteenths inches with the red tick on the ruler, over the builder keys and keypad" loading="eager" width="1206" height="2622"></picture></div>
+          <figcaption><span class="n">01</span>Rafter maths right on the keypad</figcaption>
+        </figure>
+        <figure>
+          <div class="phone"><picture><source srcset="screenshots/02-rafter-dark.png" media="(prefers-color-scheme: dark)"><img src="screenshots/02-rafter.png" alt="The Rafter calculator's cut list for a 7/12 pitch over a 14 foot 4 inch span: line length, ridge off, shortened length, tail, and plumb and level cut angles, with the rafter total of 9 feet 4 and 9 sixteenths inches on the blade" loading="lazy" width="1206" height="2622"></picture></div>
+          <figcaption><span class="n">02</span>The whole rafter, with every cut</figcaption>
+        </figure>
+        <figure>
+          <div class="phone"><picture><source srcset="screenshots/03-stairs-dark.png" media="(prefers-color-scheme: dark)"><img src="screenshots/03-stairs.png" alt="A fraction sum on the tape, 7 feet 3 and 5 eighths plus 2 feet 11 and 3 sixteenths equals 10 feet 2 and 13 sixteenths, and the blade showing 14 risers of 7 and a half inches" loading="lazy" width="1206" height="2622"></picture></div>
+          <figcaption><span class="n">03</span>Stairs worked out in one tap</figcaption>
+        </figure>
+        <figure>
+          <div class="phone"><picture><source srcset="screenshots/04-takeoff-dark.png" media="(prefers-color-scheme: dark)"><img src="screenshots/04-takeoff.png" alt="The Takeoff calculator for a 10 by 10 foot concrete slab 4 inches deep: 1.23 cubic yards, or 56 eighty-pound bags" loading="lazy" width="1206" height="2622"></picture></div>
+          <figcaption><span class="n">04</span>How much concrete to order</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap ledger" aria-labelledby="what">
+      <h2 id="what" class="label">What it does</h2>
+      <ol>
+        <li>
+          <span class="n">01</span>
+          <div><b>Feet, inches and fractions <em class="tag">Free</em></b>
+          <span>Type 7′ 3 5/8″ just as you'd read it off the tape, and choose how fine you want the answer, anywhere from a half inch down to a sixty-fourth. The blade always tells you how far the rounding moved it, so nothing slips past you.</span></div>
+        </li>
+        <li>
+          <span class="n">02</span>
+          <div><b>A tape that keeps your work <em class="tag">Free</em></b>
+          <span>Every answer drops onto a running tape, so you can tap a line to use it again or hold it to copy it somewhere else. And when a drawing comes through in metric, CONV switches the answer to inches, decimal feet or millimetres.</span></div>
+        </li>
+        <li>
+          <span class="n">03</span>
+          <div><b>Builder keys <em class="tag pro">Pro</em></b>
+          <span>Rise, run, diagonal, pitch and stairs each have their own key. Enter any two, and the next key you press solves the rest, right down to the plumb and level cuts.</span></div>
+        </li>
+        <li>
+          <span class="n">04</span>
+          <div><b>Rafters and squaring <em class="tag pro">Pro</em></b>
+          <span>Give it the span, pitch, overhang and ridge, and you'll get the rafter's total length along with a full cut list. Squaring up a slab or a deck? Enter the sides, measure the diagonal, and it'll tell you how far out you are and which way.</span></div>
+        </li>
+        <li>
+          <span class="n">05</span>
+          <div><b>Takeoff and board feet <em class="tag pro">Pro</em></b>
+          <span>Work out how much concrete to order, in cubic yards or 60 and 80 lb bags, along with drywall sheets, flooring with waste allowed for, and gravel or mulch. Board feet come with the cost once you add a price.</span></div>
+        </li>
+        <li>
+          <span class="n">06</span>
+          <div><b>Saved jobs and export <em class="tag pro">Pro</em></b>
+          <span>Give a tape a job name and it saves as you work, syncing through your own iCloud to your other devices. When the job's done, share it as text or a CSV, or export every job in one go.</span></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- The price callout: the paywall's promise, with no figure (the price is StoreKit's, local to each store). -->
+    <section class="paid" aria-labelledby="paid">
+      <div class="wrap">
+        <h2 id="paid">Pay once.<br>No subscription.</h2>
+        <p>The calculator itself is free to use. Pro is a single purchase that stays with your Apple ID on every device you own, so there's nothing to renew. There's no account to set up, no ads and no tracking, and it all works offline, right there on site.</p>
+        <!-- The tick at 16/16, Settings' "Paid in full": no numerals, as there. -->
+        <div class="ruler" aria-hidden="true" data-from="0" data-tick="16" data-numbers="false"></div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -51,10 +121,11 @@
   </footer>
 
   <script>
-    // The blade's ruler: one inch in sixteenths, 3 to 4, the tick at 5/8.
-    // Heights as the app draws them (RulerStrip): whole, half, quarter, eighth, sixteenth.
-    (function () {
-      var ruler = document.getElementById('ruler');
+    // Each ruler: one inch in sixteenths from data-from, the red tick at
+    // data-tick sixteenths. Heights as the app draws them (RulerStrip):
+    // whole, half, quarter, eighth, sixteenth.
+    document.querySelectorAll('.ruler').forEach(function (ruler) {
+      var from = Number(ruler.dataset.from), tick = Number(ruler.dataset.tick);
       var heights = [0.88, 0.22, 0.36, 0.22, 0.5, 0.22, 0.36, 0.22, 0.66, 0.22, 0.36, 0.22, 0.5, 0.22, 0.36, 0.22, 0.88];
       heights.forEach(function (h, i) {
         var t = document.createElement('span');
@@ -64,14 +135,18 @@
         if (i === 0 || i === 16) t.style.width = '2px';
         ruler.appendChild(t);
       });
-      var left = document.createElement('span');
-      left.className = 'num'; left.textContent = '3'; left.style.left = '5px';
-      var right = document.createElement('span');
-      right.className = 'num'; right.textContent = '4'; right.style.right = '6px';
+      if (ruler.dataset.numbers !== 'false') {
+        var left = document.createElement('span');
+        left.className = 'num'; left.textContent = from; left.style.left = '5px';
+        var right = document.createElement('span');
+        right.className = 'num'; right.textContent = from + 1; right.style.right = '6px';
+        ruler.append(left, right);
+      }
       var mark = document.createElement('span');
-      mark.className = 'mark'; mark.style.left = 'calc(62.5% - 1.25px)';
-      ruler.append(left, right, mark);
-    })();
+      mark.className = 'mark';
+      mark.style.left = 'calc(' + (tick / 16 * 100) + '% - ' + (tick / 16 * 2 + 0.5) + 'px)';
+      ruler.append(mark);
+    });
   </script>
 </body>
 </html>
